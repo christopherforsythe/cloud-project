@@ -1,0 +1,23 @@
+# Select image from https://hub.docker.com/_/php/
+image: php:7.3
+
+before_script:
+# Install git, the php image doesn't have installed
+- apt-get update -yqq
+- apt-get install git -yqq
+# Set up port 8000 on localhost to run php
+- php -S localhost:8000 &
+
+# Install composer
+- curl -sS https://getcomposer.org/installer | php
+
+# Install all project dependencies
+- php composer.phar install
+
+stages:
+    - test
+
+test:
+    stage: test
+    script:
+        - vendor/bin/phpunit

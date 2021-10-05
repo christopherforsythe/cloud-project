@@ -1,0 +1,1 @@
+{"version":1,"defects":{"checkTest::testCheckHTTP":3},"times":{"checktest::testCheckReturnsCorrectAnswer":0.006,"checkTest::testCheckReturnsCorrectAnswer":0.007,"checkTest::testCheckHTTP":0.003}}

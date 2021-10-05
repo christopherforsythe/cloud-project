@@ -1,0 +1,15 @@
+create an ingress controller that directs the front end to the correct service
+
+write your own in a container
+
+it takes an input, which is the paragraph and keyWord for example, makes a call to
+relevant endpoint, and sends to the front end service.
+
+Full marks possible in this section possible.
+
+Highly configurable - any changes are easily incorporated by proxy server. e.g
+if you want to add a new service or function, the proxy server can adapt easily.
+
+1. send a request from frontend to proxy with a variable to denote the service
+2. act on that variable in the proxy to send a new request to the relevant service
+3. receive the result in the proxy and echo it back to the frontend

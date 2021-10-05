@@ -1,0 +1,2 @@
+*/15 * * * * root curl http://monitor.webwordcount.40134121.qpc.hal.davecutting.uk/ >> /var/log/cron.log 2>&1
+#empty line
